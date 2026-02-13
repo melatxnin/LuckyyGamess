@@ -1,0 +1,11 @@
+{
+  "name": "com.nootcolis.core",
+  "version": "1.0.0",
+  "displayName": "NootColis Core",
+  "description": "Simple package delivery system for Unity.",
+  "unity": "6000.0",
+  "author": {
+    "name": "NootColis Team"
+  },
+  "dependencies": {}
+}

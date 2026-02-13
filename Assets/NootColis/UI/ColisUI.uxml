@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/ColisUI.uss?fileID=7433441132597879392&amp;guid=28826d193ede34b4291f7a568ed8e58f&amp;type=3#ColisUI"/>
+    <ui:VisualElement class="root-container" style="background-color: rgba(240, 242, 245, 0.26); top: -11px; left: -34px; flex-direction: column; position: absolute;">
+        <ui:VisualElement class="main-app-panel" style="top: 0; left: 0;">
+            <ui:Label text="NOOT COLIS EXPRESS" class="main-title"/>
+            <ui:VisualElement class="section-panel">
+                <ui:Label text="📤 Expédition" class="section-header"/>
+                <ui:TextField name="input-expediteur" label="Expéditeur" placeholder-text="Nom de l&apos;envoyeur..."/>
+                <ui:TextField name="input-destination" label="Destinataire" placeholder-text="Nom du destinataire..."/>
+                <ui:TextField name="input-contenu" label="Objet" placeholder-text="Contenu du colis..."/>
+                <ui:Button name="btn-envoyer" text="ENREGISTRER L&apos;ENVOI" class="btn btn-primary"/>
+            </ui:VisualElement>
+            <ui:VisualElement class="section-panel">
+                <ui:Label text="📥 Réception" class="section-header"/>
+                <ui:TextField name="input-utilisateur" label="Session Utilisateur" placeholder-text="Entrez votre nom..."/>
+                <ui:VisualElement class="button-row">
+                    <ui:Button name="btn-recuperer" text="PULL" class="btn btn-primary" style="flex-grow: 2; margin-right: 5px;"/>
+                    <ui:Button name="btn-auto" text="AUTO" class="btn btn-secondary" style="flex-grow: 1;"/>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="status-panel">
+                <ui:Label name="label-status" text="Système prêt..." class="status-label"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
