@@ -38,6 +38,10 @@ Le deuxième mini-jeu appelé "ARKANOID ROYALE", est un Casse-Brique revisité f
 non pas car le joueur doit mettre quelques euros pour pouvoir y jouer, mais car l'objectif principal
 est de casser trois briques d'un même symbole afin de profiter de différents bonus.
 
+Le troisième mini-jeu appelé "BACCARAT", est un jeu de Baccarat avec les règles de bases du jeu,
+donc également similaire au BLACK JACK en termes de fidélité au jeu réel. C'est un jeu moins
+connu que le Black Jack, mais qui sait plaire à beaucoup de personnes pour son côté simple mais intense.
+
 
 VOIX
 Toutes les voix du jeu ont été générées par intelligence artificielle via l'application mobile Inshot.
@@ -45,4 +49,6 @@ Toutes les voix du jeu ont été générées par intelligence artificielle via l
 
 SPRITES
 Tous les sprites du jeu ont été entièrement réalisés par moi et mes quelques compétences sur le logiciel
-Aseprite, ce pourquoi ils ne sont objectivement pas très complexes, mais simplement uniques.# JeuStructureDoneeNicolasGossard
+Aseprite, ce pourquoi ils ne sont objectivement pas très complexes, mais simplement uniques.
+
+# JeuStructureDoneeNicolasGossard
