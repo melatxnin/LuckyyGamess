@@ -84,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 10
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1664764278, guid: 4f3a3ed0ee6944dfba8f52c1aae815c6, type: 3}
+  m_Sprite: {fileID: -2090019060, guid: 4f3a3ed0ee6944dfba8f52c1aae815c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -107,12 +107,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BallController
   ballSprite: {fileID: 171047639091855801}
-  arkanoidManager: {fileID: 0}
   signForSpeed: 0
   speed: 5
   timeToStart: 1
   turnSpeed: 200
-  hitBallSound: {fileID: 8300000, guid: 177289604e4544396a5dcef33efb6e38, type: 3}
+  hitBallSound: {fileID: 8300000, guid: 6c34e0cf17caa499ba8d96cf2eee2fbb, type: 3}
   gameOver: 0
 --- !u!58 &2893573095826204748
 CircleCollider2D:

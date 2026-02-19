@@ -45,7 +45,7 @@ public class ArkanoidManager : MonoBehaviour
         {
             startCredits = sliderWagerController.value;
             credits = sliderWagerController.value;
-            creditsText.text = "CREDITS : $" + sliderWagerController.value.ToString();
+            creditsText.text = "CREDITS : €" + sliderWagerController.value.ToString();
         }
         else
         {

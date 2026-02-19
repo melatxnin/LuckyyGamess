@@ -165,6 +165,30 @@ public class OptionsManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void RestartArkanoidPressed()
+    {
+        OptionsInterface.SetActive(false);
+        SettingsInterface.SetActive(false);
+        UIGameInterface.SetActive(false);
+        GameInterface.SetActive(false);
+        OptionsButton.SetActive(false);
+        GameOverInterface.SetActive(false);
+        StartInterface.SetActive(false);
+
+        ArkanoidManager x = FindFirstObjectByType<ArkanoidManager>();
+
+        if (arkanoid)
+        {
+            ScoreManager.Instance.AddCredits(x.GetCredits());
+        }
+        else
+        {
+            ScoreManager.Instance.RemoveCredits(x.startCredits);
+        }
+
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void ResumePressed()
     {
         ResumeGameTime();

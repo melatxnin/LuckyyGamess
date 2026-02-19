@@ -1,6 +1,14 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+// Pour la Queue et la Stack que l'on doit mettre dans le jeu,
+// J'ai choisi de créer DeckManager.cs, un script général dans le
+// sens où il fonctionne aussi bien pour le jeu du Baccarat que
+// pour le jeu du BlackJack
+// Soit il fonctionne comme une Queue FIFO, soit comme une Stack
+// LIFO, car un packet de car peut coller à ces deux méthodes
+// Dans l'inspector on choisit juste notre mode, soit Queue, soit
+// Stack, et le déroulement de la partie est le même
 public enum DeckType
 {
     Queue,
@@ -9,22 +17,19 @@ public enum DeckType
 
 public class DeckManager : MonoBehaviour
 {
-    // Permet de choisir dans l'inspector si cette instance
-    // fonctionne en Queue ou en Stack
+
     [SerializeField] private DeckType deckType;
 
-    // On garde les deux structures en interne,
-    // mais UNE SEULE sera utilisée selon deckType
+    // On initialise une Queue et une Stack, mais on ne va en utilier
+    // qu'une selon ce qu'on a mis dans l'inspector
     private Queue<Card> queueDeck;
     private Stack<Card> stackDeck;
 
     private void Awake()
     {
-        // Initialisation des structures
         queueDeck = new Queue<Card>();
         stackDeck = new Stack<Card>();
 
-        // Création + mélange au lancement
         CreateDeck();
         ShuffleDeck();
     }
@@ -34,6 +39,8 @@ public class DeckManager : MonoBehaviour
         queueDeck.Clear();
         stackDeck.Clear();
 
+        // On parcourt toutes les couleurs (Suit) et toutes les valeurs (Rank)
+        // donc si 4 suits et 13 ranks, ca fait 52 cartes créées
         foreach (Suit s in System.Enum.GetValues(typeof(Suit)))
         {
             foreach (Rank r in System.Enum.GetValues(typeof(Rank)))
