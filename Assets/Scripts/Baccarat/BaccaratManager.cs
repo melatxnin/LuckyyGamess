@@ -57,7 +57,6 @@ public class BaccaratManager : MonoBehaviour
     [SerializeField] private Sprite[] RedSprites;
     [SerializeField] private Sprite[] GreenSprites;
 
-    private int winStreak = 0;
     private int credits = 0;
 
     public int numberChoices = 0;

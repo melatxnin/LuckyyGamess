@@ -46,6 +46,7 @@ public class PaddleController : MonoBehaviour
         paddleTransform.localScale = new Vector3(1f, 1.1f, 1.1f);
     }
 
+    // Si on est sur mobile on utilise la méthode pour le tactile
     void Update()
     {
     #if UNITY_EDITOR || UNITY_STANDALONE
@@ -87,7 +88,6 @@ public class PaddleController : MonoBehaviour
             touchInput = 0f;
         }
     }
-
 
     void FixedUpdate()
     {

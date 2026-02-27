@@ -45,7 +45,7 @@ public class ArkanoidManager : MonoBehaviour
         {
             startCredits = sliderWagerController.value;
             credits = sliderWagerController.value;
-            creditsText.text = "CREDITS : €" + sliderWagerController.value.ToString();
+            creditsText.text = "CREDITS : $" + sliderWagerController.value.ToString();
         }
         else
         {
@@ -284,7 +284,8 @@ public class ArkanoidManager : MonoBehaviour
         isPaused = true;
         yield return new WaitForSeconds(1f);
         paddleController.UpgradeScale();
-        AddCredits(Mathf.RoundToInt(sliderWagerController.value * 0.25f * coinBonus));
+        if (ScoreManager.Instance.isBet == true)
+            AddCredits(Mathf.RoundToInt(sliderWagerController.value * 0.25f * coinBonus));
         isPaused = false;
         ResetAllSymbols();
     }
@@ -293,7 +294,8 @@ public class ArkanoidManager : MonoBehaviour
     {
         isPaused = true;
         yield return new WaitForSeconds(1f);
-        AddCredits(Mathf.RoundToInt(sliderWagerController.value * 0.5f * coinBonus));
+        if (ScoreManager.Instance.isBet == true)
+            AddCredits(Mathf.RoundToInt(sliderWagerController.value * 0.5f * coinBonus));
         isPaused = false;
         ResetAllSymbols();
 
@@ -308,7 +310,8 @@ public class ArkanoidManager : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Instantiate(prefabBall, new Vector3 (0f, 0f, 0f), Quaternion.identity);
         Incrementation();
-        AddCredits(Mathf.RoundToInt(sliderWagerController.value * 1f * coinBonus));
+        if (ScoreManager.Instance.isBet == true)
+            AddCredits(Mathf.RoundToInt(sliderWagerController.value * 1f * coinBonus));
         isPaused = false;
         ResetAllSymbols();
 
@@ -326,7 +329,8 @@ public class ArkanoidManager : MonoBehaviour
         Incrementation();
         paddleController.UpgradeScale();
         isPaused = false;
-        AddCredits(Mathf.RoundToInt(sliderWagerController.value * 2 * coinBonus));
+        if (ScoreManager.Instance.isBet == true)
+            AddCredits(Mathf.RoundToInt(sliderWagerController.value * 2 * coinBonus));
         ResetAllSymbols();
         QuestsManager.Instance.Notify(QuestType.Get777BonusArkanoidRoyale);
 
